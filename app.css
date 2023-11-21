@@ -1,0 +1,360 @@
+body {
+    background-color: #AAABB8;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(196, 224, 249);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    cursor: none;
+
+}
+/*dark indigo #2C2C54, deep purple-gray #474787, cool gray #AAABB8, light gray #ECECEC
+*/
+a {
+    color: rgb(196, 224, 249);
+    margin-inline: 10px;
+
+}
+
+a, button, input[type="submit"], [role="button"] {
+    cursor: none;
+}
+
+
+#topBanner {
+    background-color: #2C2C54;
+    height: 65vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    /* overflow: hidden; */
+
+}
+
+#navTop {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: #2e2e55;
+    margin: 0;
+    padding: 1vh;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+
+}
+#navTop a {
+    color: rgb(211, 211, 211);
+    text-decoration: none;
+
+
+    transition: 0.3s ease-in-out;
+}
+#navTop a:hover {
+    color: rgb(139, 125, 230);
+    text-decoration: none;
+
+
+
+}
+
+
+#banerLeft {
+    margin-left: 5rem;
+    margin-top: 5rem;
+    font-size: 3rem;
+    position: relative;
+    max-width: 60%;
+}
+
+
+.fa {
+    font-size: 3rem; /* or any size you prefer */
+    color: rgb(149, 185, 187); /* icon color */
+    margin: 5px; /* space between icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+
+}
+
+.fa:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon */
+
+    color: #0077B5; /* color when hovered, example for LinkedIn */
+}
+
+
+#greetingLine {
+    color: aqua;
+}
+
+#selfDescribe {
+    font-size: 2rem;
+}
+#banerRight {
+    margin-left: auto; /* Add this line */
+    margin-top: 5rem;
+    margin-right: 3rem;
+    font-size: 3rem;
+    /* position: relative; */
+}
+img {
+    max-width: 100%; /* ensures the image is not wider than its container */
+    height: auto; /* maintains the aspect ratio */
+}
+
+#profilepic {
+    width: 30rem;
+    height: 30rem; /* maintains the aspect ratio */
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100000;
+    border: #2e2e55;
+   transform: translateY(-8rem);
+
+}
+
+#mypic {
+
+    height: auto;
+    transition: transform 0.2s ease-in-out; /* Adjust transition duration and easing */
+
+}
+#mypic:hover {
+    transform: scale(1.05);
+    height: auto;
+
+}
+#imgDes{
+    font-size: 1rem;
+    transform: translateX(-16rem);
+}
+
+#section1 {
+    height: 30vh;
+    color: rgb(48, 47, 47);
+    /* background-color: bisque; */
+    height: 30vh;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    max-width: 50vw;
+    margin-bottom: 2rem;
+}
+#section2 {
+    height: 140vh auto;
+    color: rgb(178, 206, 231);
+    background-color: #474787;
+    margin-top: 8rem;
+    padding-bottom: 3.5rem;
+    
+}
+
+#projectsSection {
+    margin-left: 5rem;
+    margin-top: 3.5rem;
+    margin-right: 5rem;
+}
+#projectsSection h2{
+    font-size: 2rem;
+
+}
+
+#projectColumn {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distributes space evenly between elements */
+    align-items: center; /* Align items vertically in the center, if needed */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+}
+
+
+.gamepics{
+    width: 13rem;
+    height: 13rem; /* maintains the aspect ratio */
+    border-radius: 5%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100000;
+    border: #2e2e55;
+    margin-inline: 2.5rem;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.projectBtn {
+    margin-top: 1rem;
+}
+
+.projecttitle {
+    font-size: 2rem;
+    font-weight: 650;
+    margin-bottom: 0.5rem;
+    text-shadow: 0.5px 0.5px 1px #1e1e38; /* Example shadow settings */
+}
+
+.projects a {
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #2e2e55;
+    padding: 5px;
+    padding-inline: 13px;
+    border-radius: 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    
+}
+
+
+.projects a:hover, .projects a:focus {
+    background-color: #3f4d77; /* Slightly lighter shade for hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
+}
+
+
+
+/* 
+#section3 {
+    height: 30vh;
+    color: rgb(48, 47, 47);
+ 
+    height: 30vh;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    max-width: 50vw;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    align-items: center;
+
+
+
+}
+
+#resumepic {
+
+} */
+
+#section3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 3rem;
+    margin-top: 20px;
+    color: rgb(48, 47, 47);
+
+}
+
+#resume {
+    flex-basis: 40%; /* Adjust this value as per your layout */
+    text-align: center; 
+    margin: 0;
+}
+
+#resume img {
+    max-width: 60%; /* Makes the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners to your image */
+    display: block; /* Makes the image a block element */
+    margin: 0 auto; /* Centers the image in the container */
+    margin-bottom: 1rem;
+
+}
+
+#resumepic {
+    transition: 0.3s ease-in-out;
+
+}
+#resumepic:hover {
+    transform: scale(1.05);
+}
+
+
+#resume p {
+
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer; /* Indicates that the text is clickable */
+}
+
+#sec3right {
+    flex-basis: 55%; /* Adjust this value as per your layout */
+    padding-left: 20px; /* Adds some space between the two sections */
+}
+
+#sec3right h2 {
+    margin-bottom: 15px;
+
+}
+
+/* #sec3right #selfDescription {
+    text-align: justify; 
+} */
+
+#resume a {
+    color: rgb(48, 47, 47);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+#resume a:hover {
+    color: rgb(139, 125, 230);
+    text-decoration: none;
+    font-size: 20px;
+
+
+
+}
+
+
+
+#skills-experiences {
+    /* margin: 20px 5rem;  */
+    margin-right: 3rem;
+    background-color: #474787; /* Background color of the table */
+    color: rgb(196, 224, 249); /* Font color */
+    border-radius: 10px; /* Rounded corners for the table */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    overflow: hidden; /* Ensures the border-radius clips the content */
+}
+
+#skills-experiences table {
+    width: 100%; /* Table width */
+    border-collapse: collapse; /* Removes space between borders */
+}
+
+#skills-experiences th, #skills-experiences td {
+    padding: 15px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #2e2e55; /* Border color for rows */
+}
+
+#skills-experiences th {
+    background-color: #2e2e55; /* Header background color */
+    font-weight: normal; /* Font weight for table headers */
+}
+
+#skills-experiences tr:hover {
+    background-color: #3f4d77; /* Row hover effect */
+}
+
+
+/* #section4 {
+    height: 100vh;
+} */

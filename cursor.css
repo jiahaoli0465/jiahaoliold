@@ -1,0 +1,36 @@
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100000000;
+
+}
+
+.cursor__inner {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    /* transition: transform 0.3s ease-in-out;  */
+}
+
+.cursor__inner--circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff; /* white border */
+    opacity: 1;
+    transition: transform 0.4s ease-in-out; /* Adjust transition duration and easing */
+    transform: translate(-50%, -50%);
+}
+
+.cursor__inner--dot {
+    width: 5px;
+    height: 5px;
+    background-color: #fff; /* white dot */
+}
+
+.cursor__inner--expanded {
+    transform: translate(-50%, -50%) scale(2.5); /* Enlarge the circle */
+    opacity: 0.8;
+    border: 1px solid #78b8ef; /* white border */
+    transition: transform 0.3s ease-out;
+
+}
