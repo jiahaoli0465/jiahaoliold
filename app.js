@@ -1,40 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const cursorCircle = document.querySelector('.cursor__inner--circle');
-    const cursorDot = document.querySelector('.cursor__inner--dot');
 
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
-    let speed = 0.08; // Control the speed of the movement
-
-    const updateCursor = () => {
-        currentX += (targetX - currentX) * speed;
-        currentY += (targetY - currentY) * speed;
-
-        cursorCircle.style.left = `${currentX}px`;
-        cursorCircle.style.top = `${currentY}px`;
-
-        requestAnimationFrame(updateCursor);
-    };
-
-    document.addEventListener('mousemove', e => {
-        targetX = e.pageX - window.scrollX;
-        targetY = e.pageY - window.scrollY;
-
-        cursorDot.style.left = `${targetX}px`;
-        cursorDot.style.top = `${targetY}px`;
-    });
-
-    updateCursor(); 
+    
+    tagScroll();
+    allowDownloadResume();
     
 
 
-    document.querySelectorAll('a, button, input[type="submit"], [role="button"] , #resumepic').forEach(el => {
-        el.addEventListener('mouseover', () => cursorCircle.classList.add('cursor__inner--expanded'));
-        el.addEventListener('mouseout', () => cursorCircle.classList.remove('cursor__inner--expanded'));
-    });
+});
 
+
+
+
+function tagScroll() {
+    document.querySelector('#projectTag').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevents the default anchor behavior
+        document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    document.querySelector('#skillTag').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevents the default anchor behavior
+        document.getElementById('section3').scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
+
+function allowDownloadResume() {
     const resumepic = document.querySelector('#resumepic');
     resumepic.addEventListener('click', () => {
         const link = document.createElement('a');
@@ -44,6 +34,5 @@ document.addEventListener('DOMContentLoaded', function () {
         link.click();
         document.body.removeChild(link);
     });
-});
 
-
+}
